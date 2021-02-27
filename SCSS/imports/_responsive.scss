@@ -1,0 +1,45 @@
+
+/*/////////////// RESPONSIVE ////////////// */
+.grid_container > * {
+	border-width: 5px;
+	border-color: #3333333f;
+	border-radius: 30px;
+	border-style:  solid;
+	text-align: center;
+	padding: 10px;
+	font-family: 'Poppins', sans-serif;
+	font-weight:600;
+}
+.grid_container{
+	transition: all 2s linear;
+	display: grid;
+	gap:20px;
+	grid-template: 
+	"header" 200px
+	"aside"  202px
+	"nav"    400px
+	"main"   auto
+	"footer" auto;
+}
+@media (min-width: 600px) {
+	.grid_container{
+		grid-template: 
+		"header header" 200px
+		"aside   aside" 202px
+		"nav     nav"  130px
+		"main 	main" auto
+		"footer footer"auto /
+		auto  500px ;
+	}
+}
+
+@media(min-width: 900px) {
+	.grid_container{
+		grid-template: 
+		"header header header" 200px
+		"aside aside   aside" 202px
+		"nav   main   main" auto
+		"footer footer footer" auto /
+		250px auto 600px;
+	}
+}
